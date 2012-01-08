@@ -730,6 +730,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Opetopic;
 			};
 			buildConfigurationList = A7F059AA14B9FA44005CF16F /* Build configuration list for PBXProject "OPApplicationKit" */;
 			compatibilityVersion = "Xcode 3.2";

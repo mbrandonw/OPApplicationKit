@@ -1,6 +1,6 @@
 //
 //  OPApplication.m
-//  OPKit
+//  OPApplicationKit
 //
 //  Created by Brandon Williams on 9/28/11.
 //  Copyright 2011 Opetopic. All rights reserved.
