@@ -1,0 +1,6 @@
+[submodule "OPApplicationKit/OPExtensionKit"]
+	path = OPApplicationKit/OPExtensionKit
+	url = git@brandonwilliams.beanstalkapp.com:/opextensionkit.git
+[submodule "OPApplicationKit/MagicalRecord"]
+	path = OPApplicationKit/MagicalRecord
+	url = https://github.com/magicalpanda/MagicalRecord.git
