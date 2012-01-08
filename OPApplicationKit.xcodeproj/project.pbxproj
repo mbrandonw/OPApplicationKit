@@ -15,9 +15,7 @@
 		A7F059D614B9FA6E005CF16F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B414B9FA44005CF16F /* UIKit.framework */; };
 		A7F059D714B9FA6E005CF16F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B614B9FA44005CF16F /* Foundation.framework */; };
 		A7F059D814B9FA6E005CF16F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B814B9FA44005CF16F /* CoreGraphics.framework */; };
-		A7F059DE14B9FA6E005CF16F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F059DC14B9FA6E005CF16F /* InfoPlist.strings */; };
 		A7F059E014B9FA6E005CF16F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059DF14B9FA6E005CF16F /* main.m */; };
-		A7F059E414B9FA6E005CF16F /* OPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059E314B9FA6E005CF16F /* OPAppDelegate.m */; };
 		A7F059ED14B9FAA3005CF16F /* OPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059EA14B9FAA3005CF16F /* OPApplication.m */; };
 		A7F059EE14B9FAA3005CF16F /* OPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059EA14B9FAA3005CF16F /* OPApplication.m */; };
 		A7F059EF14B9FAA3005CF16F /* OPManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059EC14B9FAA3005CF16F /* OPManagedObject.m */; };
@@ -78,61 +76,61 @@
 		A7F05A9C14B9FEEA005CF16F /* UIWebView+Opetopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05A6714B9FEEA005CF16F /* UIWebView+Opetopic.m */; };
 		A7F05A9D14B9FEEA005CF16F /* UIWebView+Opetopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05A6714B9FEEA005CF16F /* UIWebView+Opetopic.m */; };
 		A7F05AD914B9FF06005CF16F /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AA114B9FF06005CF16F /* A2BlockDelegate+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05ADA14B9FF06005CF16F /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AA114B9FF06005CF16F /* A2BlockDelegate+BlocksKit.m */; };
+		A7F05ADA14B9FF06005CF16F /* A2BlockDelegate+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AA114B9FF06005CF16F /* A2BlockDelegate+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05ADD14B9FF06005CF16F /* MFMailComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AA814B9FF06005CF16F /* MFMailComposeViewController+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05ADE14B9FF06005CF16F /* MFMailComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AA814B9FF06005CF16F /* MFMailComposeViewController+BlocksKit.m */; };
+		A7F05ADE14B9FF06005CF16F /* MFMailComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AA814B9FF06005CF16F /* MFMailComposeViewController+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05ADF14B9FF06005CF16F /* MFMessageComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAA14B9FF06005CF16F /* MFMessageComposeViewController+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AE014B9FF06005CF16F /* MFMessageComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAA14B9FF06005CF16F /* MFMessageComposeViewController+BlocksKit.m */; };
+		A7F05AE014B9FF06005CF16F /* MFMessageComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAA14B9FF06005CF16F /* MFMessageComposeViewController+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AE114B9FF06005CF16F /* NSArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAC14B9FF06005CF16F /* NSArray+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AE214B9FF06005CF16F /* NSArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAC14B9FF06005CF16F /* NSArray+BlocksKit.m */; };
+		A7F05AE214B9FF06005CF16F /* NSArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAC14B9FF06005CF16F /* NSArray+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AE314B9FF06005CF16F /* NSCache+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAE14B9FF06005CF16F /* NSCache+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AE414B9FF06005CF16F /* NSCache+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAE14B9FF06005CF16F /* NSCache+BlocksKit.m */; };
+		A7F05AE414B9FF06005CF16F /* NSCache+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AAE14B9FF06005CF16F /* NSCache+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AE514B9FF06005CF16F /* NSDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB014B9FF06005CF16F /* NSDictionary+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AE614B9FF06005CF16F /* NSDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB014B9FF06005CF16F /* NSDictionary+BlocksKit.m */; };
+		A7F05AE614B9FF06005CF16F /* NSDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB014B9FF06005CF16F /* NSDictionary+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AE714B9FF06005CF16F /* NSIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB214B9FF06005CF16F /* NSIndexSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AE814B9FF06005CF16F /* NSIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB214B9FF06005CF16F /* NSIndexSet+BlocksKit.m */; };
+		A7F05AE814B9FF06005CF16F /* NSIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB214B9FF06005CF16F /* NSIndexSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AE914B9FF06005CF16F /* NSInvocation+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB414B9FF06005CF16F /* NSInvocation+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AEA14B9FF06005CF16F /* NSInvocation+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB414B9FF06005CF16F /* NSInvocation+BlocksKit.m */; };
+		A7F05AEA14B9FF06005CF16F /* NSInvocation+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB414B9FF06005CF16F /* NSInvocation+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AEB14B9FF06005CF16F /* NSMutableArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB614B9FF06005CF16F /* NSMutableArray+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AEC14B9FF06005CF16F /* NSMutableArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB614B9FF06005CF16F /* NSMutableArray+BlocksKit.m */; };
+		A7F05AEC14B9FF06005CF16F /* NSMutableArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB614B9FF06005CF16F /* NSMutableArray+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AED14B9FF06005CF16F /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB814B9FF06005CF16F /* NSMutableDictionary+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AEE14B9FF06005CF16F /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB814B9FF06005CF16F /* NSMutableDictionary+BlocksKit.m */; };
+		A7F05AEE14B9FF06005CF16F /* NSMutableDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AB814B9FF06005CF16F /* NSMutableDictionary+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AEF14B9FF06005CF16F /* NSMutableIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABA14B9FF06005CF16F /* NSMutableIndexSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AF014B9FF06005CF16F /* NSMutableIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABA14B9FF06005CF16F /* NSMutableIndexSet+BlocksKit.m */; };
+		A7F05AF014B9FF06005CF16F /* NSMutableIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABA14B9FF06005CF16F /* NSMutableIndexSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AF114B9FF06005CF16F /* NSMutableSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABC14B9FF06005CF16F /* NSMutableSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AF214B9FF06005CF16F /* NSMutableSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABC14B9FF06005CF16F /* NSMutableSet+BlocksKit.m */; };
+		A7F05AF214B9FF06005CF16F /* NSMutableSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABC14B9FF06005CF16F /* NSMutableSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AF314B9FF06005CF16F /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABE14B9FF06005CF16F /* NSObject+AssociatedObjects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AF414B9FF06005CF16F /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABE14B9FF06005CF16F /* NSObject+AssociatedObjects.m */; };
+		A7F05AF414B9FF06005CF16F /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ABE14B9FF06005CF16F /* NSObject+AssociatedObjects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AF514B9FF06005CF16F /* NSObject+BlockObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC014B9FF06005CF16F /* NSObject+BlockObservation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AF614B9FF06005CF16F /* NSObject+BlockObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC014B9FF06005CF16F /* NSObject+BlockObservation.m */; };
+		A7F05AF614B9FF06005CF16F /* NSObject+BlockObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC014B9FF06005CF16F /* NSObject+BlockObservation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AF714B9FF06005CF16F /* NSObject+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC214B9FF06005CF16F /* NSObject+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AF814B9FF06005CF16F /* NSObject+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC214B9FF06005CF16F /* NSObject+BlocksKit.m */; };
+		A7F05AF814B9FF06005CF16F /* NSObject+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC214B9FF06005CF16F /* NSObject+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AF914B9FF06005CF16F /* NSSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC414B9FF06005CF16F /* NSSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AFA14B9FF06005CF16F /* NSSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC414B9FF06005CF16F /* NSSet+BlocksKit.m */; };
+		A7F05AFA14B9FF06005CF16F /* NSSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC414B9FF06005CF16F /* NSSet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AFB14B9FF06005CF16F /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC614B9FF06005CF16F /* NSTimer+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AFC14B9FF06005CF16F /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC614B9FF06005CF16F /* NSTimer+BlocksKit.m */; };
+		A7F05AFC14B9FF06005CF16F /* NSTimer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC614B9FF06005CF16F /* NSTimer+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AFD14B9FF06005CF16F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC814B9FF06005CF16F /* NSURLConnection+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05AFE14B9FF06005CF16F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC814B9FF06005CF16F /* NSURLConnection+BlocksKit.m */; };
+		A7F05AFE14B9FF06005CF16F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AC814B9FF06005CF16F /* NSURLConnection+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05AFF14B9FF06005CF16F /* UIActionSheet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACA14B9FF06005CF16F /* UIActionSheet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0014B9FF06005CF16F /* UIActionSheet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACA14B9FF06005CF16F /* UIActionSheet+BlocksKit.m */; };
+		A7F05B0014B9FF06005CF16F /* UIActionSheet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACA14B9FF06005CF16F /* UIActionSheet+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0114B9FF06005CF16F /* UIAlertView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACC14B9FF06005CF16F /* UIAlertView+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0214B9FF06005CF16F /* UIAlertView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACC14B9FF06005CF16F /* UIAlertView+BlocksKit.m */; };
+		A7F05B0214B9FF06005CF16F /* UIAlertView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACC14B9FF06005CF16F /* UIAlertView+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0314B9FF06005CF16F /* UIBarButtonItem+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACE14B9FF06005CF16F /* UIBarButtonItem+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0414B9FF06005CF16F /* UIBarButtonItem+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACE14B9FF06005CF16F /* UIBarButtonItem+BlocksKit.m */; };
+		A7F05B0414B9FF06005CF16F /* UIBarButtonItem+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05ACE14B9FF06005CF16F /* UIBarButtonItem+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0514B9FF06005CF16F /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD014B9FF06005CF16F /* UIControl+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0614B9FF06005CF16F /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD014B9FF06005CF16F /* UIControl+BlocksKit.m */; };
+		A7F05B0614B9FF06005CF16F /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD014B9FF06005CF16F /* UIControl+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0714B9FF06005CF16F /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD214B9FF06005CF16F /* UIGestureRecognizer+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0814B9FF06005CF16F /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD214B9FF06005CF16F /* UIGestureRecognizer+BlocksKit.m */; };
+		A7F05B0814B9FF06005CF16F /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD214B9FF06005CF16F /* UIGestureRecognizer+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0914B9FF06005CF16F /* UIPopoverController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD414B9FF06005CF16F /* UIPopoverController+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0A14B9FF06005CF16F /* UIPopoverController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD414B9FF06005CF16F /* UIPopoverController+BlocksKit.m */; };
+		A7F05B0A14B9FF06005CF16F /* UIPopoverController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD414B9FF06005CF16F /* UIPopoverController+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0B14B9FF07005CF16F /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD614B9FF06005CF16F /* UIView+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0C14B9FF07005CF16F /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD614B9FF06005CF16F /* UIView+BlocksKit.m */; };
+		A7F05B0C14B9FF07005CF16F /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD614B9FF06005CF16F /* UIView+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B0D14B9FF07005CF16F /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD814B9FF06005CF16F /* UIWebView+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B0E14B9FF07005CF16F /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD814B9FF06005CF16F /* UIWebView+BlocksKit.m */; };
+		A7F05B0E14B9FF07005CF16F /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05AD814B9FF06005CF16F /* UIWebView+BlocksKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B2714B9FF24005CF16F /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B1214B9FF24005CF16F /* A2BlockDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B2814B9FF24005CF16F /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B1214B9FF24005CF16F /* A2BlockDelegate.m */; };
+		A7F05B2814B9FF24005CF16F /* A2BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B1214B9FF24005CF16F /* A2BlockDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B2914B9FF24005CF16F /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B1414B9FF24005CF16F /* A2DynamicDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A7F05B2A14B9FF24005CF16F /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B1414B9FF24005CF16F /* A2DynamicDelegate.m */; };
+		A7F05B2A14B9FF24005CF16F /* A2DynamicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B1414B9FF24005CF16F /* A2DynamicDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7F05B3C14B9FFA2005CF16F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3B14B9FFA2005CF16F /* CoreData.framework */; };
 		A7F05B3E14B9FFA6005CF16F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3D14B9FFA6005CF16F /* QuartzCore.framework */; };
 		A7F05B4014B9FFAA005CF16F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3F14B9FFAA005CF16F /* MessageUI.framework */; };
@@ -163,6 +161,11 @@
 		A7F05B7814B9FFFD005CF16F /* MRCoreDataAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B5F14B9FFFD005CF16F /* MRCoreDataAction.m */; };
 		A7F05B7914B9FFFD005CF16F /* MRCoreDataAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F05B5F14B9FFFD005CF16F /* MRCoreDataAction.m */; };
 		A7F05B7B14BA0080005CF16F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B7A14BA0080005CF16F /* MapKit.framework */; };
+		A7F05BAC14BA0510005CF16F /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05BAB14BA0510005CF16F /* GHUnitIOS.framework */; };
+		A7F05BAD14BA0591005CF16F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B7A14BA0080005CF16F /* MapKit.framework */; };
+		A7F05BAE14BA0591005CF16F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3F14B9FFAA005CF16F /* MessageUI.framework */; };
+		A7F05BAF14BA0591005CF16F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3D14B9FFA6005CF16F /* QuartzCore.framework */; };
+		A7F05BB014BA0591005CF16F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3B14B9FFA2005CF16F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,11 +180,8 @@
 		A7F059C414B9FA44005CF16F /* OPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAppDelegate.m; sourceTree = "<group>"; };
 		A7F059D414B9FA6E005CF16F /* OPApplicationKitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OPApplicationKitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F059DB14B9FA6E005CF16F /* OPApplicationKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OPApplicationKitTests-Info.plist"; sourceTree = "<group>"; };
-		A7F059DD14B9FA6E005CF16F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7F059DF14B9FA6E005CF16F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7F059E114B9FA6E005CF16F /* OPApplicationKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OPApplicationKitTests-Prefix.pch"; sourceTree = "<group>"; };
-		A7F059E214B9FA6E005CF16F /* OPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAppDelegate.h; sourceTree = "<group>"; };
-		A7F059E314B9FA6E005CF16F /* OPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAppDelegate.m; sourceTree = "<group>"; };
 		A7F059E914B9FAA3005CF16F /* OPApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPApplication.h; sourceTree = "<group>"; };
 		A7F059EA14B9FAA3005CF16F /* OPApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPApplication.m; sourceTree = "<group>"; };
 		A7F059EB14B9FAA3005CF16F /* OPManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPManagedObject.h; sourceTree = "<group>"; };
@@ -332,6 +332,7 @@
 		A7F05B5E14B9FFFD005CF16F /* MRCoreDataAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCoreDataAction.h; sourceTree = "<group>"; };
 		A7F05B5F14B9FFFD005CF16F /* MRCoreDataAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCoreDataAction.m; sourceTree = "<group>"; };
 		A7F05B7A14BA0080005CF16F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A7F05BAB14BA0510005CF16F /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = OPApplicationKitTests/GHUnitIOS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +354,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F05BAC14BA0510005CF16F /* GHUnitIOS.framework in Frameworks */,
+				A7F05BAD14BA0591005CF16F /* MapKit.framework in Frameworks */,
+				A7F05BAE14BA0591005CF16F /* MessageUI.framework in Frameworks */,
+				A7F05BAF14BA0591005CF16F /* QuartzCore.framework in Frameworks */,
+				A7F05BB014BA0591005CF16F /* CoreData.framework in Frameworks */,
 				A7F059D614B9FA6E005CF16F /* UIKit.framework in Frameworks */,
 				A7F059D714B9FA6E005CF16F /* Foundation.framework in Frameworks */,
 				A7F059D814B9FA6E005CF16F /* CoreGraphics.framework in Frameworks */,
@@ -384,6 +390,7 @@
 		A7F059B314B9FA44005CF16F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7F05BAB14BA0510005CF16F /* GHUnitIOS.framework */,
 				A7F05B7A14BA0080005CF16F /* MapKit.framework */,
 				A7F05B3F14B9FFAA005CF16F /* MessageUI.framework */,
 				A7F05B3D14B9FFA6005CF16F /* QuartzCore.framework */,
@@ -424,8 +431,6 @@
 		A7F059D914B9FA6E005CF16F /* OPApplicationKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7F059E214B9FA6E005CF16F /* OPAppDelegate.h */,
-				A7F059E314B9FA6E005CF16F /* OPAppDelegate.m */,
 				A7F059DA14B9FA6E005CF16F /* Supporting Files */,
 			);
 			path = OPApplicationKitTests;
@@ -435,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				A7F059DB14B9FA6E005CF16F /* OPApplicationKitTests-Info.plist */,
-				A7F059DC14B9FA6E005CF16F /* InfoPlist.strings */,
 				A7F059DF14B9FA6E005CF16F /* main.m */,
 				A7F059E114B9FA6E005CF16F /* OPApplicationKitTests-Prefix.pch */,
 			);
@@ -758,7 +762,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7F059DE14B9FA6E005CF16F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,7 +852,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F059E014B9FA6E005CF16F /* main.m in Sources */,
-				A7F059E414B9FA6E005CF16F /* OPAppDelegate.m in Sources */,
 				A7F059EE14B9FAA3005CF16F /* OPApplication.m in Sources */,
 				A7F059F014B9FAA3005CF16F /* OPManagedObject.m in Sources */,
 				A7F05A6914B9FEEA005CF16F /* NSManagedObjectContext+Opetopic.m in Sources */,
@@ -925,17 +927,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		A7F059DC14B9FA6E005CF16F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7F059DD14B9FA6E005CF16F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		A7F059C614B9FA44005CF16F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1010,6 +1001,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OPApplicationKitTests\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OPApplicationKitTests/OPApplicationKitTests-Prefix.pch";
 				INFOPLIST_FILE = "OPApplicationKitTests/OPApplicationKitTests-Info.plist";
@@ -1026,6 +1021,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OPApplicationKitTests\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OPApplicationKitTests/OPApplicationKitTests-Prefix.pch";
 				INFOPLIST_FILE = "OPApplicationKitTests/OPApplicationKitTests-Info.plist";
