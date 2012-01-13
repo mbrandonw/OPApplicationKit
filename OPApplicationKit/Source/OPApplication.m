@@ -29,6 +29,7 @@ OP_SYNTHESIZE_SINGLETON_FOR_CLASS(OPApplication, sharedApp);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(terminate:) name:UIApplicationWillTerminateNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(memoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
     
     return self;
@@ -36,7 +37,9 @@ OP_SYNTHESIZE_SINGLETON_FOR_CLASS(OPApplication, sharedApp);
 
 -(void) launch:(NSNotification*)notification {
     
-    // this is a good place to stylings of OPViewController, OPTableViewController, OPNavigationViewController, OPBarButtonItem, etc...
+    /*
+     This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationViewController, OPBarButtonItem, etc...
+     */
     
     
 #if defined(DEBUG) && TARGET_IPHONE_SIMULATOR
@@ -47,38 +50,74 @@ OP_SYNTHESIZE_SINGLETON_FOR_CLASS(OPApplication, sharedApp);
 
 -(void) resignActive:(NSNotification*)notification {
     
-    // this is a good place to save your default core data context, i.e.
-    //[[NSManagedObjectContext MR_defaultContext] save];
+    /*
+     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+     */
+    
+    /* 
+     This is a good place to save your default core data context, i.e.
+    [[NSManagedObjectContext MR_defaultContext] save];
+     */
 }
 
 -(void) becomeActive:(NSNotification*)notification {
+    
+    /*
+     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     */
 }
 
 -(void) enterBackground:(NSNotification*)notification {
     
-    // this is a good place to clear your shared NSCache, i.e.
-    //[[NSCache sharedCache] removeAllObjects];
+    /*
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     */
+    
+    /*
+     This is a good place to clear your shared NSCache, i.e.
+    [[NSCache sharedCache] removeAllObjects];
+     */
 }
 
 -(void) enterForeground:(NSNotification*)notification {
+    
+    /*
+     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+     */
+}
+
+-(void) terminate:(NSNotification*)notification {
+    
+    /*
+     Called when the application is about to terminate.
+     Save data if appropriate.
+     See also applicationDidEnterBackground:.
+     */
 }
 
 -(void) memoryWarning:(NSNotification*)notification {
     
-    // this is a good place to clear your shared NSCache, i.e.
-    //[[NSCache sharedCache] removeAllObjects];
+    /* 
+     This is a good place to clear your shared NSCache, i.e.
+    [[NSCache sharedCache] removeAllObjects];
+     */
 }
 
 -(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken {
 }
 
--(void) remoteNotificationRegistrationFailed:(NSNotification*)notification {
+-(void) remoteNotificationRegistrationFailed:(NSError*)error {
 }
 
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo {
 }
 
 -(void) receivedLocalNotification:(UILocalNotification*)notification {
+}
+
+-(void) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  OPAppDelegate.h
+//  AppDelegate.h
 //  OPApplicationKit
 //
 //  Created by Brandon Williams on 1/8/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OPAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

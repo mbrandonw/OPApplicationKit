@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A75D7C3314C08FFE005FCCFD /* OPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A75D7C3214C08FFE005FCCFD /* OPAppDelegate.m */; };
+		A75D7C3414C08FFE005FCCFD /* OPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A75D7C3214C08FFE005FCCFD /* OPAppDelegate.m */; };
 		A7F059B514B9FA44005CF16F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B414B9FA44005CF16F /* UIKit.framework */; };
 		A7F059B714B9FA44005CF16F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B614B9FA44005CF16F /* Foundation.framework */; };
 		A7F059B914B9FA44005CF16F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B814B9FA44005CF16F /* CoreGraphics.framework */; };
 		A7F059C114B9FA44005CF16F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059C014B9FA44005CF16F /* main.m */; };
-		A7F059C514B9FA44005CF16F /* OPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059C414B9FA44005CF16F /* OPAppDelegate.m */; };
+		A7F059C514B9FA44005CF16F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F059C414B9FA44005CF16F /* AppDelegate.m */; };
 		A7F059D614B9FA6E005CF16F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B414B9FA44005CF16F /* UIKit.framework */; };
 		A7F059D714B9FA6E005CF16F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B614B9FA44005CF16F /* Foundation.framework */; };
 		A7F059D814B9FA6E005CF16F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F059B814B9FA44005CF16F /* CoreGraphics.framework */; };
@@ -169,6 +171,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A75D7C3114C08FFE005FCCFD /* OPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAppDelegate.h; sourceTree = "<group>"; };
+		A75D7C3214C08FFE005FCCFD /* OPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAppDelegate.m; sourceTree = "<group>"; };
 		A7F059B014B9FA44005CF16F /* OPApplicationKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OPApplicationKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F059B414B9FA44005CF16F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7F059B614B9FA44005CF16F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,8 +180,8 @@
 		A7F059BC14B9FA44005CF16F /* OPApplicationKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OPApplicationKit-Info.plist"; sourceTree = "<group>"; };
 		A7F059C014B9FA44005CF16F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7F059C214B9FA44005CF16F /* OPApplicationKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OPApplicationKit-Prefix.pch"; sourceTree = "<group>"; };
-		A7F059C314B9FA44005CF16F /* OPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAppDelegate.h; sourceTree = "<group>"; };
-		A7F059C414B9FA44005CF16F /* OPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAppDelegate.m; sourceTree = "<group>"; };
+		A7F059C314B9FA44005CF16F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A7F059C414B9FA44005CF16F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A7F059D414B9FA6E005CF16F /* OPApplicationKitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OPApplicationKitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F059DB14B9FA6E005CF16F /* OPApplicationKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OPApplicationKitTests-Info.plist"; sourceTree = "<group>"; };
 		A7F059DF14B9FA6E005CF16F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -419,8 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				A7F059F114B9FB85005CF16F /* OPApplicationKit.podspec */,
-				A7F059C314B9FA44005CF16F /* OPAppDelegate.h */,
-				A7F059C414B9FA44005CF16F /* OPAppDelegate.m */,
+				A7F059C314B9FA44005CF16F /* AppDelegate.h */,
+				A7F059C414B9FA44005CF16F /* AppDelegate.m */,
 				A7F059BC14B9FA44005CF16F /* OPApplicationKit-Info.plist */,
 				A7F059C014B9FA44005CF16F /* main.m */,
 				A7F059C214B9FA44005CF16F /* OPApplicationKit-Prefix.pch */,
@@ -453,6 +457,8 @@
 				A7F059EA14B9FAA3005CF16F /* OPApplication.m */,
 				A7F059EB14B9FAA3005CF16F /* OPManagedObject.h */,
 				A7F059EC14B9FAA3005CF16F /* OPManagedObject.m */,
+				A75D7C3114C08FFE005FCCFD /* OPAppDelegate.h */,
+				A75D7C3214C08FFE005FCCFD /* OPAppDelegate.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -774,7 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F059C114B9FA44005CF16F /* main.m in Sources */,
-				A7F059C514B9FA44005CF16F /* OPAppDelegate.m in Sources */,
+				A7F059C514B9FA44005CF16F /* AppDelegate.m in Sources */,
 				A7F059ED14B9FAA3005CF16F /* OPApplication.m in Sources */,
 				A7F059EF14B9FAA3005CF16F /* OPManagedObject.m in Sources */,
 				A7F05A6814B9FEEA005CF16F /* NSManagedObjectContext+Opetopic.m in Sources */,
@@ -845,6 +851,7 @@
 				A7F05B7414B9FFFD005CF16F /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				A7F05B7614B9FFFD005CF16F /* MagicalRecordHelpers.m in Sources */,
 				A7F05B7814B9FFFD005CF16F /* MRCoreDataAction.m in Sources */,
+				A75D7C3314C08FFE005FCCFD /* OPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,6 +930,7 @@
 				A7F05B7514B9FFFD005CF16F /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				A7F05B7714B9FFFD005CF16F /* MagicalRecordHelpers.m in Sources */,
 				A7F05B7914B9FFFD005CF16F /* MRCoreDataAction.m in Sources */,
+				A75D7C3414C08FFE005FCCFD /* OPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,6 +1074,7 @@
 				A7F059E714B9FA6E005CF16F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

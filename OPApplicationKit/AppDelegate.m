@@ -1,14 +1,14 @@
 //
-//  OPAppDelegate.m
+//  AppDelegate.m
 //  OPApplicationKit
 //
 //  Created by Brandon Williams on 1/8/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "OPAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation OPAppDelegate
+@implementation AppDelegate
 
 @synthesize window = _window;
 
