@@ -13,7 +13,4 @@ Pod::Spec.new do |s|
   
   s.frameworks = 'CoreData'
   
-  s.dependency 'MagicalRecord', :git => 'http://github.com/magicalpanda/MagicalRecord.git', :tag => '1.8'
-  s.dependency 'OPExtensionKit', :git => 'git@brandonwilliams.beanstalkapp.com:/opextensionkit.git'
-  
 end

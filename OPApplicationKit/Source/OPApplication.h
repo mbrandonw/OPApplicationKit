@@ -15,7 +15,23 @@
 @interface OPApplication : NSObject
 
 +(id) sharedApp;
--(void) windDown;
--(void) windUp;
+
+/**
+ App notification methods to be overridden by subclass.
+ */
+-(void) launch:(NSNotification*)notification;
+-(void) resignActive:(NSNotification*)notification;
+-(void) becomeActive:(NSNotification*)notification;
+-(void) enterBackground:(NSNotification*)notification;
+-(void) enterForeground:(NSNotification*)notification;
+-(void) memoryWarning:(NSNotification*)notification;
+
+/**
+ Remote and local notification methods to be overridden by subclass.
+ */
+-(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken;
+-(void) remoteNotificationRegistrationFailed:(NSNotification*)notification;
+-(void) receivedRemoteNotification:(NSDictionary*)userInfo;
+-(void) receivedLocalNotification:(UILocalNotification*)notification;
 
 @end
