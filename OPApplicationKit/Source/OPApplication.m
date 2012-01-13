@@ -7,7 +7,6 @@
 //
 
 #import "OPApplication.h"
-#import "OPMacros.h"
 
 #if defined(DEBUG) && TARGET_IPHONE_SIMULATOR
 @interface NSObject (OPApplication)
@@ -17,7 +16,15 @@
 
 @implementation OPApplication
 
-OP_SYNTHESIZE_SINGLETON_FOR_CLASS(OPApplication, sharedApp);
++(OPApplication*) sharedApp {
+    
+    static OPApplication *sharedApp = nil;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        sharedApp = [[self alloc] init];
+    });
+    return sharedApp;
+}
 
 -(id) init {
     if (! (self = [super init]))
