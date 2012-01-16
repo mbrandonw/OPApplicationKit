@@ -45,7 +45,7 @@
 -(void) launch:(NSNotification*)notification {
     
     /*
-     This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationViewController, OPBarButtonItem, etc...
+     This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc...
      */
     
     
