@@ -17,29 +17,23 @@
 +(id) sharedApp;
 
 /**
- Global application notification methods to be overridden by subclass. These methods
- are called by observing the appropriate NSNotification key.
+ All of the UIApplicationDelegate methods forwarded to us from OPAppDeleate.
  */
--(void) launch:(NSNotification*)notification;
--(void) resignActive:(NSNotification*)notification;
--(void) becomeActive:(NSNotification*)notification;
--(void) enterBackground:(NSNotification*)notification;
--(void) enterForeground:(NSNotification*)notification;
--(void) terminate:(NSNotification*)notification;
--(void) memoryWarning:(NSNotification*)notification;
 
-/**
- Remote and local notification methods to be overridden by subclass. The OPAppDelegate 
- base class calls these methods when it receives the corresponding notification.
- */
+-(BOOL) finishLaunchingWithOptions:(NSDictionary*)launchOptions;
+-(void) becomeActive;
+-(void) resignActive;
+-(void) enterBackground;
+-(void) enterForeground;
+-(void) terminate;
+
+-(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
+
+-(void) receiveMemoryWarning;
+
 -(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken;
 -(void) remoteNotificationRegistrationFailed:(NSError*)error;
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo;
 -(void) receivedLocalNotification:(UILocalNotification*)notification;
-
-/**
- Opening URLs. The OPAppDelegate base class calls this method when it receives the corresponding notification.
- */
--(void) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 
 @end

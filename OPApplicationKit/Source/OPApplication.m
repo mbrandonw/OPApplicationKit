@@ -26,36 +26,22 @@
     return sharedApp;
 }
 
--(id) init {
-    if (! (self = [super init]))
-        return nil;
-    
-    // listen for global app notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(launch:) name:UIApplicationDidFinishLaunchingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resignActive:) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(terminate:) name:UIApplicationWillTerminateNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(memoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
-    
-    return self;
-}
-
--(void) launch:(NSNotification*)notification {
+-(BOOL) finishLaunchingWithOptions:(NSDictionary*)launchOptions {
     
     /*
      This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc...
      */
     
     
-#if defined(DEBUG) && TARGET_IPHONE_SIMULATOR
     // enables safari web inspector for debugging webviews (!!!) ... just go to http://localhost:9999 while a webview is visible
+#if defined(DEBUG) && TARGET_IPHONE_SIMULATOR
     [NSClassFromString(@"WebView") _enableRemoteInspector];
 #endif
+    
+    return YES;
 }
 
--(void) resignActive:(NSNotification*)notification {
+-(void) resignActive {
     
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -68,14 +54,14 @@
      */
 }
 
--(void) becomeActive:(NSNotification*)notification {
+-(void) becomeActive {
     
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 }
 
--(void) enterBackground:(NSNotification*)notification {
+-(void) enterBackground {
     
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -83,19 +69,19 @@
      */
     
     /*
-     This is a good place to clear your shared NSCache, i.e.
+     This is a good place to clear your caches, i.e.
     [[NSCache sharedCache] removeAllObjects];
      */
 }
 
--(void) enterForeground:(NSNotification*)notification {
+-(void) enterForeground {
     
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
 }
 
--(void) terminate:(NSNotification*)notification {
+-(void) terminate {
     
     /*
      Called when the application is about to terminate.
@@ -104,10 +90,10 @@
      */
 }
 
--(void) memoryWarning:(NSNotification*)notification {
+-(void) receiveMemoryWarning {
     
     /* 
-     This is a good place to clear your shared NSCache, i.e.
+     This is a good place to clear your caches, i.e.
     [[NSCache sharedCache] removeAllObjects];
      */
 }
@@ -124,7 +110,8 @@
 -(void) receivedLocalNotification:(UILocalNotification*)notification {
 }
 
--(void) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+-(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return YES;
 }
 
 @end

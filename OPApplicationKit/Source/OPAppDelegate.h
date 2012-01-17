@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ Please make a #define in your prefix header that sets `OPApplicationSubclass`
+ to the custom subclass you made from `OPApplication`.
+ */
+#ifndef OPApplicationSubclass
+#define OPApplicationSubclass   OPApplication
+#endif
+
 @interface OPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @end
