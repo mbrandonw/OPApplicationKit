@@ -32,6 +32,7 @@
 		A7F05BAE14BA0591005CF16F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3F14B9FFAA005CF16F /* MessageUI.framework */; };
 		A7F05BAF14BA0591005CF16F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3D14B9FFA6005CF16F /* QuartzCore.framework */; };
 		A7F05BB014BA0591005CF16F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F05B3B14B9FFA2005CF16F /* CoreData.framework */; };
+		CAAE533814C71B82006DC713 /* OPApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAE533714C71B82006DC713 /* OPApplicationTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		A7F05B3F14B9FFAA005CF16F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A7F05B7A14BA0080005CF16F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7F05BAB14BA0510005CF16F /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = OPApplicationKitTests/GHUnitIOS.framework; sourceTree = "<group>"; };
+		CAAE533714C71B82006DC713 /* OPApplicationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPApplicationTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		A7F059D914B9FA6E005CF16F /* OPApplicationKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				CAAE533714C71B82006DC713 /* OPApplicationTest.m */,
 				A7F059DA14B9FA6E005CF16F /* Supporting Files */,
 			);
 			path = OPApplicationKitTests;
@@ -285,6 +288,7 @@
 				A7F059EE14B9FAA3005CF16F /* OPApplication.m in Sources */,
 				A7F059F014B9FAA3005CF16F /* OPManagedObject.m in Sources */,
 				A75D7C3414C08FFE005FCCFD /* OPAppDelegate.m in Sources */,
+				CAAE533814C71B82006DC713 /* OPApplicationTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +347,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OPApplicationKit/OPApplicationKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "OPApplicationKit/OPApplicationKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -370,6 +379,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OPApplicationKitTests/OPApplicationKitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "OPApplicationKitTests/OPApplicationKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",

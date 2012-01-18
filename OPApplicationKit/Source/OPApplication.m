@@ -8,7 +8,7 @@
 
 #import "OPApplication.h"
 
-#if defined(DEBUG) && TARGET_IPHONE_SIMULATOR
+#if DEBUG && TARGET_IPHONE_SIMULATOR
 @interface NSObject (OPApplication)
 +(void) _enableRemoteInspector;
 @end
@@ -17,6 +17,10 @@
 @implementation OPApplication
 
 +(OPApplication*) sharedApp {
+    
+#if OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY
+    NSAssert([NSThread isMainThread], @"");
+#endif
     
     static OPApplication *sharedApp = nil;
     static dispatch_once_t once;
@@ -34,7 +38,7 @@
     
     
     // enables safari web inspector for debugging webviews (!!!) ... just go to http://localhost:9999 while a webview is visible
-#if defined(DEBUG) && TARGET_IPHONE_SIMULATOR
+#if DEBUG && TARGET_IPHONE_SIMULATOR
     [NSClassFromString(@"WebView") _enableRemoteInspector];
 #endif
     

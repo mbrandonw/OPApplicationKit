@@ -10,7 +10,8 @@
 
 /**
  Please make a #define in your prefix header that sets `OPApplicationSubclass`
- to the custom subclass you made from `OPApplication`.
+ to the custom subclass you made from `OPApplication`. Put this macro
+ in your build settings.
  */
 #ifndef OPApplicationSubclass
 #define OPApplicationSubclass   OPApplication
