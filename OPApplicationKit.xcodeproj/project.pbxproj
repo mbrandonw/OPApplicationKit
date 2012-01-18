@@ -62,6 +62,7 @@
 		A7F05B7A14BA0080005CF16F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A7F05BAB14BA0510005CF16F /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = OPApplicationKitTests/GHUnitIOS.framework; sourceTree = "<group>"; };
 		CAAE533714C71B82006DC713 /* OPApplicationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPApplicationTest.m; sourceTree = "<group>"; };
+		CAAE536D14C73047006DC713 /* OPApplicationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPApplicationKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +176,7 @@
 		A7F059E814B9FAA3005CF16F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CAAE536D14C73047006DC713 /* OPApplicationKit.h */,
 				A7F059E914B9FAA3005CF16F /* OPApplication.h */,
 				A7F059EA14B9FAA3005CF16F /* OPApplication.m */,
 				A7F059EB14B9FAA3005CF16F /* OPManagedObject.h */,
