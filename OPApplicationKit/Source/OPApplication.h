@@ -15,11 +15,9 @@
 /**
  Determines if you want to force all access to OPApplication to be on the main
  thread, i.e. raises an exception if you try to call methods from another thread.
- Throw this macro in your building settings.
+ Throw this macro in your build settings.
  */
-#ifndef OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY
-#define OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY 1
-#endif
+//#define OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY 1
 
 @interface OPApplication : NSObject
 

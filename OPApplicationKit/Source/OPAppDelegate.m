@@ -11,29 +11,30 @@
 
 @implementation OPAppDelegate
 
+@synthesize applicationClass;
+
 -(void) applicationDidBecomeActive:(UIApplication *)application {
-    [[OPApplicationSubclass sharedApp] becomeActive];
+    [[self.applicationClass sharedApp] becomeActive];
 }
 
 -(void) applicationWillResignActive:(UIApplication *)application {
-    [[OPApplicationSubclass sharedApp] resignActive];
+    [[self.applicationClass sharedApp] resignActive];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication *)application {
-    [[OPApplicationSubclass sharedApp] enterBackground];
+    [[self.applicationClass sharedApp] enterBackground];
 }
 
 -(void) applicationWillEnterForeground:(UIApplication *)application {
-    [[OPApplicationSubclass sharedApp] enterForeground];
+    [[self.applicationClass sharedApp] enterForeground];
 }
 
 -(void) applicationWillTerminate:(UIApplication *)application {
-    [[OPApplicationSubclass sharedApp] terminate];
+    [[self.applicationClass sharedApp] terminate];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    return [[OPApplicationSubclass sharedApp] finishLaunchingWithOptions:launchOptions];
+    return [[self.applicationClass sharedApp] finishLaunchingWithOptions:launchOptions];
 }
 
 -(BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
@@ -42,26 +43,27 @@
 }
 
 -(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [[OPApplicationSubclass sharedApp] openURL:url sourceApplication:sourceApplication annotation:annotation];
+    return [[self.applicationClass sharedApp] openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 -(void) applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    return [[self.applicationClass sharedApp] receiveMemoryWarning];
 }
 
 -(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [[OPApplicationSubclass sharedApp] receivedRemoteNotification:userInfo];
+    [[self.applicationClass sharedApp] receivedRemoteNotification:userInfo];
 }
 
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[OPApplicationSubclass sharedApp] remoteNotificationRegistrationSucceeded:deviceToken];
+    [[self.applicationClass sharedApp] remoteNotificationRegistrationSucceeded:deviceToken];
 }
 
 -(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    [[OPApplicationSubclass sharedApp] remoteNotificationRegistrationFailed:error];
+    [[self.applicationClass sharedApp] remoteNotificationRegistrationFailed:error];
 }
 
 -(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    [[OPApplicationSubclass sharedApp] receivedLocalNotification:notification];
+    [[self.applicationClass sharedApp] receivedLocalNotification:notification];
 }
 
 @end

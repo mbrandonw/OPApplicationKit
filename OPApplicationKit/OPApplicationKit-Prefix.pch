@@ -12,12 +12,4 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
-
-    // this is an example of what to do when you have a custom subclass of OPApplications
-//    #import "TTApplication.h"
-//    #ifdef OPApplicationSubclass
-//    #undef OPApplicationSubclass
-//    #endif
-//    #define OPApplicationSubclass   TTApplication
-
 #endif
