@@ -7,7 +7,6 @@
 //
 
 #import "OPApplication.h"
-#import "NSObject+Opetopic.h"
 
 #if DEBUG && TARGET_IPHONE_SIMULATOR
 @interface NSObject (OPApplication)
@@ -43,9 +42,7 @@
         [NSClassFromString(@"WebView") _enableRemoteInspector];
 #endif
     
-    [NSObject performBlockNextRunloop:^{
-        [self delayedFinishLaunchingWithOptions:launchOptions];
-    }];
+    [self performSelector:@selector(delayedFinishLaunchingWithOptions:) withObject:launchOptions afterDelay:0.0f];
     
     return YES;
 }
@@ -65,9 +62,7 @@
 
 -(void) becomeActive {
     
-    [NSObject performBlockNextRunloop:^{
-        [self delayedBecomeActive];
-    }];
+    [self performSelector:@selector(delayedBecomeActive) withObject:nil afterDelay:0.0f];
     
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -89,9 +84,7 @@
 
 -(void) enterForeground {
     
-    [NSObject performBlockNextRunloop:^{
-        [self delayedEnterForeground];
-    }];
+    [self performSelector:@selector(delayedEnterForeground) withObject:nil afterDelay:0.0f];
     
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
@@ -132,15 +125,12 @@
 }
 
 -(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-    
 }
 
 -(void) delayedBecomeActive {
-    
 }
 
 -(void) delayedEnterForeground {
-    
 }
 
 @end
