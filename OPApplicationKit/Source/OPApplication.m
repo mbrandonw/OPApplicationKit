@@ -77,8 +77,7 @@
      */
     
     /*
-     This is a good place to clear your caches, i.e.
-    [[NSCache sharedCache] removeAllObjects];
+     This is a good place to clear your caches.
      */
 }
 
@@ -103,8 +102,7 @@
 -(void) receiveMemoryWarning {
     
     /* 
-     This is a good place to clear your caches, i.e.
-    [[NSCache sharedCache] removeAllObjects];
+     This is a good place to clear your caches.
      */
 }
 
