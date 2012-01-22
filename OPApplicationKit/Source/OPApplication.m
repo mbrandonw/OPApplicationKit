@@ -7,6 +7,7 @@
 //
 
 #import "OPApplication.h"
+#import "NSObject+Opetopic.h"
 
 #if DEBUG && TARGET_IPHONE_SIMULATOR
 @interface NSObject (OPApplication)
@@ -36,11 +37,15 @@
      This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc...
      */
     
-    
     // enables safari web inspector for debugging webviews (!!!) ... just go to http://localhost:9999 while a webview is visible
 #if DEBUG && TARGET_IPHONE_SIMULATOR
-    [NSClassFromString(@"WebView") _enableRemoteInspector];
+    if ([NSClassFromString(@"WebView") instancesRespondToSelector:@selector(_enableRemoteInspector)])
+        [NSClassFromString(@"WebView") _enableRemoteInspector];
 #endif
+    
+    [NSObject performBlockNextRunloop:^{
+        [self delayedFinishLaunchingWithOptions:launchOptions];
+    }];
     
     return YES;
 }
@@ -59,6 +64,10 @@
 }
 
 -(void) becomeActive {
+    
+    [NSObject performBlockNextRunloop:^{
+        [self delayedBecomeActive];
+    }];
     
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -79,6 +88,10 @@
 }
 
 -(void) enterForeground {
+    
+    [NSObject performBlockNextRunloop:^{
+        [self delayedEnterForeground];
+    }];
     
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
@@ -116,6 +129,18 @@
 
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return YES;
+}
+
+-(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+    
+}
+
+-(void) delayedBecomeActive {
+    
+}
+
+-(void) delayedEnterForeground {
+    
 }
 
 @end
