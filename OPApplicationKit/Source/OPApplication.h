@@ -46,8 +46,6 @@
  */
 -(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
 -(void) delayedBecomeActive;
--(void) delayedResignActive;
--(void) delayedEnterBackground;
 -(void) delayedEnterForeground;
 
 @end

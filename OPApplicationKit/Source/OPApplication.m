@@ -7,6 +7,8 @@
 //
 
 #import "OPApplication.h"
+#import "UIApplication+Opetopic.h"
+#import "OPTabBarController.h"
 
 #if DEBUG && TARGET_IPHONE_SIMULATOR
 @interface NSObject (OPApplication)
@@ -51,10 +53,6 @@
 
 -(void) resignActive {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self delayedResignActive];
-    });
-    
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -79,10 +77,6 @@
 
 -(void) enterBackground {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self delayedEnterBackground];
-    });
-    
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -91,6 +85,24 @@
     /*
      This is a good place to clear your caches.
      */
+    
+    // clear out any view controllers that are not immediately front and center
+    [[UIApplication sharedApplication] performBackgroundTask:^{
+        
+        // handle the unloading based on the type of root view controller we have
+        UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+        if ([window.rootViewController isKindOfClass:[OPTabBarController class]])
+        {
+            // if we are dealing with a tab bar controller, then we try the unselected tabs' navigation stacks
+            OPTabBarController *tabBarController = (OPTabBarController*)window.rootViewController;
+            for (UIViewController *controller in tabBarController.viewControllers)
+            {
+                if (controller != tabBarController.selectedViewController && [controller isKindOfClass:[UINavigationController class]])
+                    [(UINavigationController*)controller popToRootViewControllerAnimated:NO];
+            }
+        }
+        
+    } completion:nil expiration:nil];
 }
 
 -(void) enterForeground {
@@ -140,12 +152,6 @@
 }
 
 -(void) delayedBecomeActive {
-}
-
--(void) delayedResignActive {
-}
-
--(void) delayedEnterBackground {
 }
 
 -(void) delayedEnterForeground {
