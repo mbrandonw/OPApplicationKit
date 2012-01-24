@@ -35,7 +35,9 @@
 -(BOOL) finishLaunchingWithOptions:(NSDictionary*)launchOptions {
     
     /*
-     This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc...
+     This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc. 
+     In fact, put only the bare minimum needed to show something on the screen here, and leave other initialization stuff for
+     the -delayedFinishLaunchingWithOptions:, which is called on the next run loop.
      */
     
     // enables safari web inspector for debugging webviews (!!!) ... just go to http://localhost:9999 while a webview is visible
