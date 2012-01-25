@@ -9,6 +9,7 @@
 #import "OPApplication.h"
 #import "UIApplication+Opetopic.h"
 #import "OPTabBarController.h"
+#import "OPMacros.h"
 
 #if DEBUG && TARGET_IPHONE_SIMULATOR
 @interface NSObject (OPApplication)
@@ -33,6 +34,7 @@
 }
 
 -(BOOL) finishLaunchingWithOptions:(NSDictionary*)launchOptions {
+    DLog(@"");
     
     /*
      This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc. 
@@ -54,19 +56,16 @@
 }
 
 -(void) resignActive {
+    DLog(@"");
     
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
-    
-    /* 
-     This is a good place to save your default core data context, i.e.
-    [[NSManagedObjectContext MR_defaultContext] save];
-     */
 }
 
 -(void) becomeActive {
+    DLog(@"");
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self delayedBecomeActive];
@@ -78,6 +77,7 @@
 }
 
 -(void) enterBackground {
+    DLog(@"");
     
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -85,29 +85,29 @@
      */
     
     /*
-     This is a good place to clear your caches.
+     This is a good place to clear your caches and save your NSManagedObjectContext instances.
      */
     
-    // clear out any view controllers that are not immediately front and center
     [[UIApplication sharedApplication] performBackgroundTask:^{
-        
-        // handle the unloading based on the type of root view controller we have
-        UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-        if ([window.rootViewController isKindOfClass:[OPTabBarController class]])
-        {
-            // if we are dealing with a tab bar controller, then we try the unselected tabs' navigation stacks
-            OPTabBarController *tabBarController = (OPTabBarController*)window.rootViewController;
-            for (UIViewController *controller in tabBarController.viewControllers)
-            {
-                if (controller != tabBarController.selectedViewController && [controller isKindOfClass:[UINavigationController class]])
-                    [(UINavigationController*)controller popToRootViewControllerAnimated:NO];
-            }
-        }
-        
+        [self delayedEnterBackground];
     } completion:nil expiration:nil];
+    
+    // clear out any view controllers that are not immediately front and center
+    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+    if ([window.rootViewController isKindOfClass:[OPTabBarController class]])
+    {
+        // if we are dealing with a tab bar controller, then we try the unselected tabs' navigation stacks
+        OPTabBarController *tabBarController = (OPTabBarController*)window.rootViewController;
+        for (UIViewController *controller in tabBarController.viewControllers)
+        {
+            if (controller != tabBarController.selectedViewController && [controller isKindOfClass:[UINavigationController class]])
+                [(UINavigationController*)controller popToRootViewControllerAnimated:NO];
+        }
+    }
 }
 
 -(void) enterForeground {
+    DLog(@"");
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self delayedEnterForeground];
@@ -119,6 +119,7 @@
 }
 
 -(void) terminate {
+    DLog(@"");
     
     /*
      Called when the application is about to terminate.
@@ -128,6 +129,7 @@
 }
 
 -(void) receiveMemoryWarning {
+    DLog(@"");
     
     /* 
      This is a good place to clear your caches.
@@ -135,28 +137,40 @@
 }
 
 -(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken {
+    DLog(@"");
 }
 
 -(void) remoteNotificationRegistrationFailed:(NSError*)error {
+    DLog(@"");
 }
 
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo {
+    DLog(@"");
 }
 
 -(void) receivedLocalNotification:(UILocalNotification*)notification {
+    DLog(@"");
 }
 
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    DLog(@"");
     return YES;
 }
 
 -(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+    DLog(@"");
 }
 
 -(void) delayedBecomeActive {
+    DLog(@"");
+}
+
+-(void) delayedEnterBackground {
+    DLog(@"");
 }
 
 -(void) delayedEnterForeground {
+    DLog(@"");
 }
 
 @end

@@ -40,12 +40,13 @@
 -(void) receivedLocalNotification:(UILocalNotification*)notification;
 
 /**
- Delayed versions of the -finishLaunch, -becomeActive and -enterForeground methods. These methods are called
+ Delayed versions of various application delegate methods. These methods are called
  on the next pass of the run loop after their corresponding non-delayed versions are called. Putting as much
- set up code in these methods as possible helps the app start up as quickly.
+ set up / tear down code in these methods as possible helps the app start up as quickly.
  */
 -(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
 -(void) delayedBecomeActive;
+-(void) delayedEnterBackground; // WARNING: potentially called off the main thread
 -(void) delayedEnterForeground;
 
 @end
