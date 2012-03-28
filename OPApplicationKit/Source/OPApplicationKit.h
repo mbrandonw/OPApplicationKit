@@ -11,3 +11,4 @@
 #import "OPAppDelegate.h"
 #import "OPApplication.h"
 #import "OPManagedObject.h"
+#import "OPHTTPStatusCodes.h"
