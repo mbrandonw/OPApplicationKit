@@ -34,7 +34,7 @@
 }
 
 -(BOOL) finishLaunchingWithOptions:(NSDictionary*)launchOptions {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     /*
      This is a good place to stylings of OPViewController, OPTableViewController, OPNavigationController, OPBarButtonItem, etc. 
@@ -56,7 +56,7 @@
 }
 
 -(void) resignActive {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -65,7 +65,7 @@
 }
 
 -(void) becomeActive {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self delayedBecomeActive];
@@ -77,7 +77,7 @@
 }
 
 -(void) enterBackground {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -107,7 +107,7 @@
 }
 
 -(void) enterForeground {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self delayedEnterForeground];
@@ -119,7 +119,7 @@
 }
 
 -(void) terminate {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     /*
      Called when the application is about to terminate.
@@ -129,7 +129,7 @@
 }
 
 -(void) receiveMemoryWarning {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     
     /* 
      This is a good place to clear your caches.
@@ -137,40 +137,40 @@
 }
 
 -(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(void) remoteNotificationRegistrationFailed:(NSError*)error {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(void) receivedLocalNotification:(UILocalNotification*)notification {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
     return YES;
 }
 
 -(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(void) delayedBecomeActive {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(void) delayedEnterBackground {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 -(void) delayedEnterForeground {
-    DLogControllerAndMethod();
+    DLogClassAndMethod();
 }
 
 @end
