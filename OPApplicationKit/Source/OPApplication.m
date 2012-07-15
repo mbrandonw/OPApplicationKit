@@ -48,9 +48,11 @@
         [NSClassFromString(@"WebView") _enableRemoteInspector];
 #endif
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self delayedFinishLaunchingWithOptions:launchOptions];
-    });
+    if ([self respondsToSelector:@selector(delayedFinishLaunchingWithOptions:)]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self delayedFinishLaunchingWithOptions:launchOptions];
+        });
+    }
     
     return YES;
 }
@@ -67,9 +69,11 @@
 -(void) becomeActive {
     DLogClassAndMethod();
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self delayedBecomeActive];
-    });
+    if ([self respondsToSelector:@selector(delayedBecomeActive)]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self delayedBecomeActive];
+        });
+    }
     
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -88,9 +92,11 @@
      This is a good place to clear your caches and save your NSManagedObjectContext instances.
      */
     
-    [[UIApplication sharedApplication] performBackgroundTask:^{
-        [self delayedEnterBackground];
-    } completion:nil expiration:nil];
+    if ([self respondsToSelector:@selector(delayedEnterBackground)]) {
+        [[UIApplication sharedApplication] performBackgroundTask:^{
+            [self delayedEnterBackground];
+        } completion:nil expiration:nil];
+    }
     
     // clear out any view controllers that are not immediately front and center
     UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
@@ -109,9 +115,11 @@
 -(void) enterForeground {
     DLogClassAndMethod();
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self delayedEnterForeground];
-    });
+    if ([self respondsToSelector:@selector(delayedEnterForeground)]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self delayedEnterForeground];
+        });
+    }
     
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
@@ -155,22 +163,6 @@
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     DLogClassAndMethod();
     return YES;
-}
-
--(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-    DLogClassAndMethod();
-}
-
--(void) delayedBecomeActive {
-    DLogClassAndMethod();
-}
-
--(void) delayedEnterBackground {
-    DLogClassAndMethod();
-}
-
--(void) delayedEnterForeground {
-    DLogClassAndMethod();
 }
 
 @end

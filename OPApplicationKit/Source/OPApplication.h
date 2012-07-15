@@ -19,7 +19,21 @@
  */
 //#define OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY 1
 
-@interface OPApplication : NSObject
+@protocol OPApplicationDelegate <NSObject>
+@optional
+/**
+ Delayed versions of various application delegate methods. These methods are called
+ on the next pass of the run loop after their corresponding non-delayed versions are called. Putting as much
+ set up / tear down code in these methods as possible helps the app start up quickly.
+ */
+-(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
+-(void) delayedBecomeActive;
+-(void) delayedEnterBackground; // WARNING: not called on the main thread as it is wrapped in a UIApplication background task
+-(void) delayedEnterForeground;
+
+@end
+
+@interface OPApplication : NSObject <OPApplicationDelegate>
 
 +(id) sharedApp;
 
@@ -38,15 +52,5 @@
 -(void) remoteNotificationRegistrationFailed:(NSError*)error;
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo;
 -(void) receivedLocalNotification:(UILocalNotification*)notification;
-
-/**
- Delayed versions of various application delegate methods. These methods are called
- on the next pass of the run loop after their corresponding non-delayed versions are called. Putting as much
- set up / tear down code in these methods as possible helps the app start up as quickly.
- */
--(void) delayedFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
--(void) delayedBecomeActive;
--(void) delayedEnterBackground; // WARNING: potentially called off the main thread
--(void) delayedEnterForeground;
 
 @end
