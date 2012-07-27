@@ -11,8 +11,6 @@
 
 @implementation OPAppDelegate
 
-@synthesize applicationClass;
-
 -(void) applicationDidBecomeActive:(UIApplication *)application {
     [[self.applicationClass sharedApp] becomeActive];
 }
