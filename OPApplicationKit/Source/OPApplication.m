@@ -11,12 +11,6 @@
 #import "OPTabBarController.h"
 #import "OPMacros.h"
 
-#if DEBUG && TARGET_IPHONE_SIMULATOR
-@interface NSObject (OPApplication)
-+(void) _enableRemoteInspector;
-@end
-#endif
-
 @implementation OPApplication
 
 +(OPApplication*) sharedApp {
@@ -41,12 +35,6 @@
      In fact, put only the bare minimum needed to show something on the screen here, and leave other initialization stuff for
      the -delayedFinishLaunchingWithOptions:, which is called on the next run loop.
      */
-    
-    // enables safari web inspector for debugging webviews (!!!) ... just go to http://localhost:9999 while a webview is visible
-#if DEBUG && TARGET_IPHONE_SIMULATOR
-    if ([NSClassFromString(@"WebView") instancesRespondToSelector:@selector(_enableRemoteInspector)])
-        [NSClassFromString(@"WebView") _enableRemoteInspector];
-#endif
     
     if ([self respondsToSelector:@selector(delayedFinishLaunchingWithOptions:)]) {
         dispatch_async(dispatch_get_main_queue(), ^{
