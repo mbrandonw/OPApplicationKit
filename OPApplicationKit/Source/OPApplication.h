@@ -53,4 +53,10 @@
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo;
 -(void) receivedLocalNotification:(UILocalNotification*)notification;
 
+/**
+ New application delegate methods for convenience.
+ */
+-(void) receivedInactiveRemoteNotification:(NSDictionary*)userInfo;
+-(void) receivedActiveRemoteNotification:(NSDictionary*)userInfo;
+
 @end

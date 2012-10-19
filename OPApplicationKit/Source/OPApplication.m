@@ -142,6 +142,15 @@
 
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo {
     DLogClassAndMethod();
+    
+    if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
+    {
+        [self receivedActiveRemoteNotification:userInfo];
+    }
+    else
+    {
+        [self receivedInactiveRemoteNotification:userInfo];
+    }
 }
 
 -(void) receivedLocalNotification:(UILocalNotification*)notification {
@@ -151,6 +160,15 @@
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     DLogClassAndMethod();
     return YES;
+}
+
+
+-(void) receivedActiveRemoteNotification:(NSDictionary *)userInfo {
+    DLogClassAndMethod();
+}
+
+-(void) receivedInactiveRemoteNotification:(NSDictionary *)userInfo {
+    DLogClassAndMethod();
 }
 
 @end
