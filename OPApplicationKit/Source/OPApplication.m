@@ -159,6 +159,7 @@
 
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     DLogClassAndMethod();
+    DLogMessage(nil, 0, @"URL: %@", url);
     return YES;
 }
 
