@@ -42,6 +42,26 @@
         });
     }
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        // sometimes we wanna run one-off blocks of code for each build
+        NSString *buildKey = @"OPApplication_one_offs_previous_build";
+        NSUInteger previousBuild = [[[NSUserDefaults standardUserDefaults] objectForKey:buildKey] integerValue];
+        NSUInteger currentBuild = [[[NSBundle mainBundle] bundleVersion] integerValue];
+        if (previousBuild != currentBuild)
+        {
+            UIBackgroundTaskIdentifier identifier = UIBackgroundTaskInvalid;
+            identifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+                [[UIApplication sharedApplication] endBackgroundTask:identifier];
+            }];
+            [self oneTimeSetup:NSMakeRange(previousBuild, currentBuild-previousBuild) completion:^{
+                [[UIApplication sharedApplication] endBackgroundTask:identifier];
+            }];
+        }
+        [[NSUserDefaults standardUserDefaults] setObject:@(currentBuild) forKey:buildKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    });
+    
     return YES;
 }
 
@@ -170,6 +190,16 @@
 
 -(void) receivedInactiveRemoteNotification:(NSDictionary *)userInfo {
     DLogClassAndMethod();
+}
+
+-(void) oneTimeSetup:(NSRange)buildRange completion:(void(^)(void))completion {
+    
+    // make sure completion is always called
+    if (buildRange.location == 0) {
+        if (completion) {
+            completion();
+        }
+    }
 }
 
 @end

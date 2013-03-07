@@ -59,4 +59,9 @@
 -(void) receivedInactiveRemoteNotification:(NSDictionary*)userInfo;
 -(void) receivedActiveRemoteNotification:(NSDictionary*)userInfo;
 
+/**
+ Called once on launch each time the build version of the app changes.
+ */
+-(void) oneTimeSetup:(NSRange)buildRange completion:(void(^)(void))completion;
+
 @end
