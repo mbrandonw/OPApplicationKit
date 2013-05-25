@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "OPAppDelegate.h"
-#import "OPApplication.h"
+#import "OPApp.h"
 #import "OPManagedObject.h"
 #import "OPHTTPStatusCodes.h"

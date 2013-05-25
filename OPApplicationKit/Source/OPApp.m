@@ -1,25 +1,25 @@
 //
-//  OPApplication.m
+//  OPApp.m
 //  OPApplicationKit
 //
 //  Created by Brandon Williams on 9/28/11.
 //  Copyright 2011 Opetopic. All rights reserved.
 //
 
-#import "OPApplication.h"
+#import "OPApp.h"
 #import "UIApplication+Opetopic.h"
 #import "OPTabBarController.h"
 #import "OPMacros.h"
 
-@implementation OPApplication
+@implementation OPApp
 
-+(OPApplication*) sharedApp {
++(OPApp*) sharedApp {
     
 #if OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY
     NSAssert([NSThread isMainThread], @"");
 #endif
     
-    static OPApplication *sharedApp = nil;
+    static OPApp *sharedApp = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         sharedApp = [[self alloc] init];

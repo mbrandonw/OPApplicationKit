@@ -1,19 +1,19 @@
 //
-//  OPApplication.h
+//  OPApp.h
 //  OPApplicationKit
 //
 //  Created by Brandon Williams on 9/28/11.
 //  Copyright 2011 Opetopic. All rights reserved.
 //
 
-/** OPApplication
+/** OPApp
  
  A sensible base class for an application singleton.
  */
 #import <Foundation/Foundation.h>
 
 /**
- Determines if you want to force all access to OPApplication to be on the main
+ Determines if you want to force all access to OPApp to be on the main
  thread, i.e. raises an exception if you try to call methods from another thread.
  Throw this macro in your build settings.
  */
@@ -33,7 +33,7 @@
 
 @end
 
-@interface OPApplication : NSObject <OPApplicationDelegate>
+@interface OPApp : NSObject <OPApplicationDelegate>
 
 +(id) sharedApp;
 
