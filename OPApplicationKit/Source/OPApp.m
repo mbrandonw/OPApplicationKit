@@ -35,15 +35,9 @@
      In fact, put only the bare minimum needed to show something on the screen here, and leave other initialization stuff for
      the -delayedFinishLaunchingWithOptions:, which is called on the next run loop.
      */
-    
-    if ([self respondsToSelector:@selector(delayedFinishLaunchingWithOptions:)]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self delayedFinishLaunchingWithOptions:launchOptions];
-        });
-    }
-    
+
     dispatch_async(dispatch_get_main_queue(), ^{
-        
+
         // sometimes we wanna run one-off blocks of code for each build
         NSString *buildKey = @"OPApplication_one_offs_previous_build";
         NSUInteger previousBuild = [[[NSUserDefaults standardUserDefaults] objectForKey:buildKey] integerValue];
@@ -60,14 +54,18 @@
         }
         [[NSUserDefaults standardUserDefaults] setObject:@(currentBuild) forKey:buildKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
+
+        if ([self respondsToSelector:@selector(delayedFinishLaunchingWithOptions:)]) {
+            [self delayedFinishLaunchingWithOptions:launchOptions];
+        }
     });
-    
+
     return YES;
 }
 
 -(void) resignActive {
     DLogClassAndMethod();
-    
+
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
