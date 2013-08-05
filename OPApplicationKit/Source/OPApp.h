@@ -37,6 +37,8 @@
 
 +(id) sharedApp;
 
+@property (nonatomic, readonly) UIWindow *window;
+
 /**
  All of the UIApplicationDelegate methods forwarded to us from OPAppDeleate.
  */

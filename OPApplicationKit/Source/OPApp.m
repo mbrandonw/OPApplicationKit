@@ -27,6 +27,10 @@
     return sharedApp;
 }
 
+-(UIWindow*) window {
+  return [[[UIApplication sharedApplication] delegate] window];
+}
+
 -(BOOL) finishLaunchingWithOptions:(NSDictionary*)launchOptions {
     DLogClassAndMethod();
     
