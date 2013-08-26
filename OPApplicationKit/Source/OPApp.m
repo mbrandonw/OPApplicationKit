@@ -13,19 +13,7 @@
 
 @implementation OPApp
 
-+(OPApp*) sharedApp {
-    
-#if OP_FORCE_OPAPPLICATION_MAIN_THREAD_ONLY
-    NSAssert([NSThread isMainThread], @"");
-#endif
-    
-    static OPApp *sharedApp = nil;
-    static dispatch_once_t once;
-    dispatch_once(&once, ^{
-        sharedApp = [[self alloc] init];
-    });
-    return sharedApp;
-}
+OP_SINGLETON_IMPLEMENTATION_FOR(OPApp, sharedApp);
 
 -(UIWindow*) window {
   return [[[UIApplication sharedApplication] delegate] window];
