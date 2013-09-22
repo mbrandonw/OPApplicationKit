@@ -64,6 +64,6 @@ OP_SINGLETON_HEADER_FOR(OPApp, sharedApp);
 /**
  Called once on launch each time the build version of the app changes.
  */
--(void) oneTimeSetup:(NSRange)buildRange completion:(void(^)(void))completion;
+-(void) oneTimeSetup:(NSRange)buildRange;
 
 @end

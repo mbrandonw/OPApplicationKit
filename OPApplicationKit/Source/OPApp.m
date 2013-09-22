@@ -34,15 +34,8 @@ OP_SINGLETON_IMPLEMENTATION_FOR(OPApp, sharedApp);
         NSString *buildKey = @"OPApplication_one_offs_previous_build";
         NSUInteger previousBuild = [[[NSUserDefaults standardUserDefaults] objectForKey:buildKey] integerValue];
         NSUInteger currentBuild = [[[NSBundle mainBundle] bundleVersion] integerValue];
-        if (previousBuild != currentBuild)
-        {
-            UIBackgroundTaskIdentifier identifier = UIBackgroundTaskInvalid;
-            identifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-                [[UIApplication sharedApplication] endBackgroundTask:identifier];
-            }];
-            [self oneTimeSetup:NSMakeRange(previousBuild, currentBuild-previousBuild) completion:^{
-                [[UIApplication sharedApplication] endBackgroundTask:identifier];
-            }];
+        if (previousBuild != currentBuild) {
+            [self oneTimeSetup:NSMakeRange(previousBuild, currentBuild-previousBuild)];
         }
         [[NSUserDefaults standardUserDefaults] setObject:@(currentBuild) forKey:buildKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -182,14 +175,7 @@ OP_SINGLETON_IMPLEMENTATION_FOR(OPApp, sharedApp);
     DLogClassAndMethod();
 }
 
--(void) oneTimeSetup:(NSRange)buildRange completion:(void(^)(void))completion {
-    
-    // make sure completion is always called
-    if (buildRange.location == 0) {
-        if (completion) {
-            completion();
-        }
-    }
+-(void) oneTimeSetup:(NSRange)buildRange {
 }
 
 @end
