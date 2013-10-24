@@ -34,7 +34,7 @@ OP_SINGLETON_IMPLEMENTATION_FOR(OPApp, sharedApp);
         NSString *buildKey = @"OPApplication_one_offs_previous_build";
         NSUInteger previousBuild = [[[NSUserDefaults standardUserDefaults] objectForKey:buildKey] integerValue];
         NSUInteger currentBuild = [[[NSBundle mainBundle] bundleVersion] integerValue];
-        if (previousBuild != currentBuild) {
+        if (previousBuild > 0 && previousBuild != currentBuild) {
             [self oneTimeSetup:NSMakeRange(previousBuild, currentBuild-previousBuild)];
         }
         [[NSUserDefaults standardUserDefaults] setObject:@(currentBuild) forKey:buildKey];
