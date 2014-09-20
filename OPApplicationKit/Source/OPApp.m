@@ -12,7 +12,7 @@
 
 static OPApp *_sharedApp = nil;
 static dispatch_once_t _onceToken = 0;
-+(instancetype) singletonMethod {
++(instancetype) sharedApp {
   dispatch_once(&_onceToken, ^{
     if (! _sharedApp) {
       _sharedApp = [[[self class] alloc] init];
