@@ -35,7 +35,7 @@
 
 @interface OPApp : NSObject <OPApplicationDelegate>
 
-OP_SINGLETON_HEADER_FOR(OPApp, sharedApp);
++(instancetype) sharedApp;
 
 @property (nonatomic, readonly) UIWindow *window;
 
