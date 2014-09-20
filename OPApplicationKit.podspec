@@ -9,5 +9,5 @@ Pod::Spec.new do |spec|
   spec.source_files = 'OPApplicationKit/Source/*.{h,m}'
   spec.requires_arc = true
 
-  s.frameworks = 'CoreData'
+  spec.frameworks = 'CoreData'
 end
