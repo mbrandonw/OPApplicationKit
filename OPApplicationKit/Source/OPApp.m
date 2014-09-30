@@ -10,16 +10,7 @@
 
 @implementation OPApp
 
-static OPApp *_sharedApp = nil;
-static dispatch_once_t _onceToken = 0;
-+(instancetype) sharedApp {
-  dispatch_once(&_onceToken, ^{
-    if (! _sharedApp) {
-      _sharedApp = [[[self class] alloc] init];
-    }
-  });
-  return _sharedApp;
-}
+OP_SINGLETON_IMPLEMENTATION_FOR(OPApp, sharedApp)
 
 -(UIWindow*) window {
   return [[[UIApplication sharedApplication] delegate] window];

@@ -11,6 +11,7 @@
  A sensible base class for an application singleton.
  */
 #import <Foundation/Foundation.h>
+#import "OPMacros.h"
 
 /**
  Determines if you want to force all access to OPApp to be on the main
@@ -35,7 +36,7 @@
 
 @interface OPApp : NSObject <OPApplicationDelegate>
 
-+(instancetype) sharedApp;
+OP_SINGLETON_HEADER_FOR(OPApp, sharedApp)
 
 @property (nonatomic, readonly) UIWindow *window;
 
