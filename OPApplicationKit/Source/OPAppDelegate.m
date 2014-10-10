@@ -12,56 +12,60 @@
 @implementation OPAppDelegate
 
 -(void) applicationDidBecomeActive:(UIApplication *)application {
-    [[self.applicationClass sharedApp] becomeActive];
+  [[self.applicationClass sharedApp] becomeActive];
 }
 
 -(void) applicationWillResignActive:(UIApplication *)application {
-    [[self.applicationClass sharedApp] resignActive];
+  [[self.applicationClass sharedApp] resignActive];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication *)application {
-    [[self.applicationClass sharedApp] enterBackground];
+  [[self.applicationClass sharedApp] enterBackground];
 }
 
 -(void) applicationWillEnterForeground:(UIApplication *)application {
-    [[self.applicationClass sharedApp] enterForeground];
+  [[self.applicationClass sharedApp] enterForeground];
 }
 
 -(void) applicationWillTerminate:(UIApplication *)application {
-    [[self.applicationClass sharedApp] terminate];
+  [[self.applicationClass sharedApp] terminate];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    return [[self.applicationClass sharedApp] finishLaunchingWithOptions:launchOptions];
+  return [[self.applicationClass sharedApp] finishLaunchingWithOptions:launchOptions];
 }
 
 -(BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    // just forward to the more robust method
-    return [self application:application openURL:url sourceApplication:nil annotation:nil];
+  // just forward to the more robust method
+  return [self application:application openURL:url sourceApplication:nil annotation:nil];
 }
 
 -(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [[self.applicationClass sharedApp] openURL:url sourceApplication:sourceApplication annotation:annotation];
+  return [[self.applicationClass sharedApp] openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 -(void) applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    return [[self.applicationClass sharedApp] receiveMemoryWarning];
+  return [[self.applicationClass sharedApp] receiveMemoryWarning];
 }
 
 -(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [[self.applicationClass sharedApp] receivedRemoteNotification:userInfo];
+  [[self.applicationClass sharedApp] receivedRemoteNotification:userInfo];
 }
 
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[self.applicationClass sharedApp] remoteNotificationRegistrationSucceeded:deviceToken];
+  [[self.applicationClass sharedApp] remoteNotificationRegistrationSucceeded:deviceToken];
+}
+
+-(void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+  [[self.applicationClass sharedApp] userNotificationRegistrationSucceeded:notificationSettings];
 }
 
 -(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    [[self.applicationClass sharedApp] remoteNotificationRegistrationFailed:error];
+  [[self.applicationClass sharedApp] remoteNotificationRegistrationFailed:error];
 }
 
 -(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    [[self.applicationClass sharedApp] receivedLocalNotification:notification];
+  [[self.applicationClass sharedApp] receivedLocalNotification:notification];
 }
 
 @end

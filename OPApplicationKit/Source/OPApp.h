@@ -10,7 +10,8 @@
  
  A sensible base class for an application singleton.
  */
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 #import "OPMacros.h"
 
 /**
@@ -52,6 +53,7 @@ OP_SINGLETON_HEADER_FOR(OPApp, sharedApp)
 -(BOOL) openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 -(void) receiveMemoryWarning;
 -(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken;
+-(void) userNotificationRegistrationSucceeded:(UIUserNotificationSettings*)settings;
 -(void) remoteNotificationRegistrationFailed:(NSError*)error;
 -(void) receivedRemoteNotification:(NSDictionary*)userInfo;
 -(void) receivedLocalNotification:(UILocalNotification*)notification;

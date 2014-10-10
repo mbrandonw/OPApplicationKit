@@ -112,6 +112,9 @@ OP_SINGLETON_IMPLEMENTATION_FOR(OPApp, sharedApp)
 -(void) remoteNotificationRegistrationSucceeded:(NSData*)deviceToken {
 }
 
+-(void) userNotificationRegistrationSucceeded:(UIUserNotificationSettings*)settings {
+}
+
 -(void) remoteNotificationRegistrationFailed:(NSError*)error {
 }
 
